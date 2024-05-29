@@ -1,0 +1,28 @@
+﻿
+#categories {
+    display: flex;
+    flex-wrap: wrap; /* Öğelerin taşmasını engelleyip alt satıra geçmelerini sağlar */
+    list-style-type: none; /* Varsayılan liste stilini kaldırır */
+    padding: 0;
+    margin: 0;
+}
+
+#categories li {
+    margin: 20px; /* Öğeler arasına boşluk ekler */
+}
+
+#categories a {
+    display: block;
+    text-align: center; /* Metni merkeze hizalar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: black; /* Metin rengini ayarlar */
+}
+
+#categories img {
+    width: 200px; /* Görsel genişliğini ayarlar */
+    height: auto; /* Oranını koruyarak yüksekliği ayarlar */
+    display: block;
+    margin-bottom: 5px; /* Görselin altına boşluk ekler */
+}
+
+

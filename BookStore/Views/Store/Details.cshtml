@@ -1,0 +1,47 @@
+﻿@model BookStore.Models.Work
+@{
+    ViewBag.Title = "Work - " + Model.Title;
+}
+
+
+
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+                <div class="heading-section-bold mb-4 mt-md-5">
+                    <div class="ml-md-0">
+                        <h2>@Model.Title</h2>
+                        <p>
+                            <img alt="@Model.Title" src="~/images/placeholder.jpg" />
+                        </p>
+                        <div id="work-details">
+                            <p>
+                                <em>Genre:</em>
+                                @Model.Genre.Name
+                            </p>
+                            <p>
+                                <em>Artist:</em>
+                                @Model.Writer.Name
+                            </p>
+                            <p>
+                                <em>Price:</em>
+                                @String.Format("{0:F}", Model.Price)
+                            </p>
+                            <p class="btn btn-second">@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.Id })</p>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+
+

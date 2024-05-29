@@ -1,0 +1,49 @@
+﻿@using BookStore.Models;
+@model WorkGenreModel
+
+@{
+    ViewBag.Title = "Browse Albums";
+}
+
+<link rel="stylesheet" href="~/css/css/categories.css">
+
+
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-15 py-md-5 wrap-about pb-md-5 ftco-animate">
+                <div class="heading-section-bold mb-4 mt-md-5">
+                    <div class="ml-md-0">
+                        <ul id="categories">
+                            @foreach (var genre in Model.Genres)
+                            {
+
+                                <li> <a href="/Store/Browse/@genre.Id">@genre.Name</a>   </li>
+
+                            }
+                        </ul>
+                        <div class="genre">
+                            <h3><em></em> Works</h3>
+
+                            <ul id="categories">
+                                @foreach (var work in Model.Works)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Details",
+                                              new { id = work.Id })">
+                                            <img alt="@work.Title"
+                                                 src="~/images/placeholder.jpg" />
+                                            <span> @work.Title     </span>
+                                        </a>
+
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>	

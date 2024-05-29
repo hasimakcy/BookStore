@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BookStore.Models.Work>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<section class="ftco-section ftco-cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="cart-list">
+                    <table class="table">
+                        <thead class="thead-primary">
+                            <p>
+                                <a asp-action="Create">Create New</a>
+                            </p>
+                            <tr class="text-center">
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Title)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Price)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BookPicture)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Genre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Writer)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="text-center">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BookPicture)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Genre.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Writer.Name)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                                </tr>
+
+                                <!-- END TR-->
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
