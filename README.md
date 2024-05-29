@@ -8,7 +8,7 @@ Admin Giriş Bilgileri:
 
 
 
-"Projeminin içeriğinden bilgilendirici ve etkileyici iki görsel."
+"Projemin içeriğinden bilgilendirici ve etkileyici iki görsel."
 
 ![BookStoreHome](https://github.com/hasimakcy/BookStore/assets/77328571/94b6618f-ca53-44d0-9cfa-f1e7560e469b)
 
